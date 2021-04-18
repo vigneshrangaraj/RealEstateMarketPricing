@@ -9,11 +9,15 @@
 /* Begin PBXBuildFile section */
 		1C2C37A926113B9D00304AF8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2C37A826113B9D00304AF8 /* AppDelegate.swift */; };
 		1C2C37AB26113B9D00304AF8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2C37AA26113B9D00304AF8 /* SceneDelegate.swift */; };
-		1C2C37AD26113B9D00304AF8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2C37AC26113B9D00304AF8 /* ViewController.swift */; };
-		1C2C37B026113B9D00304AF8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C2C37AE26113B9D00304AF8 /* Main.storyboard */; };
+		1C2C37AD26113B9D00304AF8 /* PropertyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2C37AC26113B9D00304AF8 /* PropertyViewController.swift */; };
 		1C2C37B226113B9E00304AF8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C2C37B126113B9E00304AF8 /* Assets.xcassets */; };
 		1C2C37B526113B9E00304AF8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C2C37B326113B9E00304AF8 /* LaunchScreen.storyboard */; };
 		1C2C37C026113B9E00304AF8 /* FoodTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2C37BF26113B9E00304AF8 /* FoodTrackerTests.swift */; };
+		1CD4B7DD26222ED4000571D2 /* DisplayResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD4B7DC26222ED4000571D2 /* DisplayResultsViewController.swift */; };
+		1CD4B7E026224092000571D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CD4B7DE26224092000571D2 /* Main.storyboard */; };
+		1CD4B7E226235655000571D2 /* PropertyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD4B7E126235655000571D2 /* PropertyTableViewCell.swift */; };
+		1CD4B7E42624FC8B000571D2 /* PropertyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD4B7E32624FC8B000571D2 /* PropertyTableViewController.swift */; };
+		1CD4B7E82624FD57000571D2 /* Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD4B7E72624FD57000571D2 /* Property.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,14 +34,18 @@
 		1C2C37A526113B9D00304AF8 /* FoodTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C2C37A826113B9D00304AF8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1C2C37AA26113B9D00304AF8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1C2C37AC26113B9D00304AF8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		1C2C37AF26113B9D00304AF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1C2C37AC26113B9D00304AF8 /* PropertyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyViewController.swift; sourceTree = "<group>"; usesTabs = 0; };
 		1C2C37B126113B9E00304AF8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1C2C37B426113B9E00304AF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1C2C37B626113B9E00304AF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1C2C37BB26113B9E00304AF8 /* FoodTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoodTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C2C37BF26113B9E00304AF8 /* FoodTrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTrackerTests.swift; sourceTree = "<group>"; };
 		1C2C37C126113B9E00304AF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1CD4B7DC26222ED4000571D2 /* DisplayResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayResultsViewController.swift; sourceTree = "<group>"; };
+		1CD4B7DF26224092000571D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1CD4B7E126235655000571D2 /* PropertyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyTableViewCell.swift; sourceTree = "<group>"; };
+		1CD4B7E32624FC8B000571D2 /* PropertyTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyTableViewController.swift; sourceTree = "<group>"; };
+		1CD4B7E72624FD57000571D2 /* Property.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Property.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,11 +89,15 @@
 			children = (
 				1C2C37A826113B9D00304AF8 /* AppDelegate.swift */,
 				1C2C37AA26113B9D00304AF8 /* SceneDelegate.swift */,
-				1C2C37AC26113B9D00304AF8 /* ViewController.swift */,
-				1C2C37AE26113B9D00304AF8 /* Main.storyboard */,
+				1CD4B7DE26224092000571D2 /* Main.storyboard */,
+				1CD4B7E32624FC8B000571D2 /* PropertyTableViewController.swift */,
+				1CD4B7E126235655000571D2 /* PropertyTableViewCell.swift */,
+				1C2C37AC26113B9D00304AF8 /* PropertyViewController.swift */,
+				1CD4B7DC26222ED4000571D2 /* DisplayResultsViewController.swift */,
 				1C2C37B126113B9E00304AF8 /* Assets.xcassets */,
 				1C2C37B326113B9E00304AF8 /* LaunchScreen.storyboard */,
 				1C2C37B626113B9E00304AF8 /* Info.plist */,
+				1CD4B7E72624FD57000571D2 /* Property.swift */,
 			);
 			path = FoodTracker;
 			sourceTree = "<group>";
@@ -180,9 +192,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CD4B7E026224092000571D2 /* Main.storyboard in Resources */,
 				1C2C37B526113B9E00304AF8 /* LaunchScreen.storyboard in Resources */,
 				1C2C37B226113B9E00304AF8 /* Assets.xcassets in Resources */,
-				1C2C37B026113B9D00304AF8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,8 +212,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1C2C37AD26113B9D00304AF8 /* ViewController.swift in Sources */,
+				1C2C37AD26113B9D00304AF8 /* PropertyViewController.swift in Sources */,
+				1CD4B7E226235655000571D2 /* PropertyTableViewCell.swift in Sources */,
 				1C2C37A926113B9D00304AF8 /* AppDelegate.swift in Sources */,
+				1CD4B7DD26222ED4000571D2 /* DisplayResultsViewController.swift in Sources */,
+				1CD4B7E42624FC8B000571D2 /* PropertyTableViewController.swift in Sources */,
+				1CD4B7E82624FD57000571D2 /* Property.swift in Sources */,
 				1C2C37AB26113B9D00304AF8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -225,20 +241,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		1C2C37AE26113B9D00304AF8 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1C2C37AF26113B9D00304AF8 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		1C2C37B326113B9E00304AF8 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				1C2C37B426113B9E00304AF8 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		1CD4B7DE26224092000571D2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1CD4B7DF26224092000571D2 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

@@ -1,24 +1,385 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dTv-UC-rgS">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Your Properties-->
+        <scene sceneID="Rr7-cM-G1i">
+            <objects>
+                <tableViewController id="1tm-mk-GHQ" customClass="PropertyTableViewController" customModule="FoodTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="87" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="bDI-fI-9Cm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PropertyTableViewCell" rowHeight="87" id="EGE-VF-yxn" customClass="PropertyTableViewCell" customModule="FoodTracker" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="87"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EGE-VF-yxn" id="yVg-PW-gql">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="87"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="yHT-vM-Mi4">
+                                            <rect key="frame" x="20" y="0.0" width="99" height="90"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Number 3, Haver Hill Road" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q3H-0P-EvC">
+                                            <rect key="frame" x="127" y="11" width="267" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$206,174" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Myn-4M-wkc">
+                                            <rect key="frame" x="127" y="40" width="249" height="39"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" weight="black" pointSize="17"/>
+                                            <color key="textColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="nameLabel" destination="q3H-0P-EvC" id="fwf-f8-lBi"/>
+                                    <outlet property="photoImageView" destination="yHT-vM-Mi4" id="zzr-b3-8yP"/>
+                                    <outlet property="resultLabel" destination="Myn-4M-wkc" id="eYf-DV-fvG"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="ShowDetail" id="vEv-fO-0Y2"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="1tm-mk-GHQ" id="0fL-G6-E1P"/>
+                            <outlet property="delegate" destination="1tm-mk-GHQ" id="sVb-Sh-8xO"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Your Properties" id="RzD-W7-cEQ">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="vB9-CG-OLD">
+                            <connections>
+                                <segue destination="tmO-OG-GNv" kind="modal" identifier="AddItem" id="Rm3-8g-q0H"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K56-dP-Ptg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="213.04347826086959" y="129.91071428571428"/>
+        </scene>
+        <!--New Property-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="BYZ-38-t0r" customClass="PropertyViewController" customModule="FoodTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="dtc-rO-qgh">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="dtc-rO-qgh" secondAttribute="height" multiplier="207:448" id="CFl-wh-uLB"/>
+                                </constraints>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="regular"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="2PV-ri-Iys">
+                                <rect key="frame" x="20" y="108" width="374" height="621"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lot Area In SqFt" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fOR-m6-RTW">
+                                        <rect key="frame" x="0.0" y="0.0" width="122" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Lot Area in Sq Ft" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lBI-78-xRd">
+                                        <rect key="frame" x="0.0" y="24.5" width="374" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Basement Sq Ft" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="36g-ug-wRx">
+                                        <rect key="frame" x="0.0" y="62.5" width="162.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Total Bsmt in Sq Ft" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vcm-RA-JkX">
+                                        <rect key="frame" x="0.0" y="87" width="374" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ground Living Area in Sq Ft" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="APl-x6-IkC">
+                                        <rect key="frame" x="0.0" y="125" width="208.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ground Living Area in SqFt" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zBT-gO-t9h">
+                                        <rect key="frame" x="0.0" y="149.5" width="374" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of full baths" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rqk-4V-Pf9">
+                                        <rect key="frame" x="0.0" y="187.5" width="156.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="No of full baths" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SwW-EU-H7a">
+                                        <rect key="frame" x="0.0" y="212" width="374" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total rooms above ground" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GQ5-jL-QBy">
+                                        <rect key="frame" x="0.0" y="250" width="199.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Total rooms above ground" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UkJ-BM-7qv">
+                                        <rect key="frame" x="0.0" y="274.5" width="374" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total bedrooms above ground" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hns-K7-Sqj">
+                                        <rect key="frame" x="0.0" y="312.5" width="229" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Total beds above ground" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y1b-dW-Xfz">
+                                        <rect key="frame" x="0.0" y="337" width="374" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wood Deck in Sq Ft" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Q4-Wr-fPb">
+                                        <rect key="frame" x="0.0" y="375" width="150.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Wood deck in sq ft" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9oP-4F-wNk">
+                                        <rect key="frame" x="0.0" y="399.5" width="374" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First floor in Sq Ft" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5hh-2p-fxS">
+                                        <rect key="frame" x="0.0" y="437.5" width="135" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First floor in Sq Ft" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oPi-AI-eMp">
+                                        <rect key="frame" x="0.0" y="462" width="374" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Second Floor in Sq Ft" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JZe-Ko-7cG">
+                                        <rect key="frame" x="0.0" y="500" width="163.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Second floor in Sq Ft" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ek5-C7-qr3">
+                                        <rect key="frame" x="0.0" y="524.5" width="374" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No of Cars in Garage" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wJr-2Z-VII">
+                                        <rect key="frame" x="0.0" y="562.5" width="159.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="No of cars in garage" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LCg-fQ-4aD">
+                                        <rect key="frame" x="0.0" y="587" width="374" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="oPi-AI-eMp" secondAttribute="trailing" id="4gF-bs-QIk"/>
+                                    <constraint firstAttribute="trailing" secondItem="Y1b-dW-Xfz" secondAttribute="trailing" id="EKq-C0-I1z"/>
+                                    <constraint firstAttribute="trailing" secondItem="ek5-C7-qr3" secondAttribute="trailing" id="GQT-xw-CxU"/>
+                                    <constraint firstAttribute="trailing" secondItem="lBI-78-xRd" secondAttribute="trailing" id="Jr4-2I-ydj"/>
+                                    <constraint firstAttribute="trailing" secondItem="9oP-4F-wNk" secondAttribute="trailing" id="SaL-Vp-gSV"/>
+                                    <constraint firstAttribute="trailing" secondItem="LCg-fQ-4aD" secondAttribute="trailing" id="Sem-Ig-QC8"/>
+                                    <constraint firstAttribute="trailing" secondItem="zBT-gO-t9h" secondAttribute="trailing" id="YEw-x8-J97"/>
+                                    <constraint firstAttribute="trailing" secondItem="UkJ-BM-7qv" secondAttribute="trailing" id="c7M-dv-VXd"/>
+                                    <constraint firstAttribute="trailing" secondItem="vcm-RA-JkX" secondAttribute="trailing" id="mhk-Ze-J7y"/>
+                                    <constraint firstAttribute="trailing" secondItem="SwW-EU-H7a" secondAttribute="trailing" id="oMp-wM-h8s"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="2PV-ri-Iys" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="V2I-Yk-8IQ"/>
+                            <constraint firstItem="2PV-ri-Iys" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="V7E-cV-gbW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2PV-ri-Iys" secondAttribute="trailing" constant="20" id="xSa-3T-eXT"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" title="New Property" id="b0P-Z9-unE">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="wfX-dI-CUy">
+                            <connections>
+                                <action selector="cancel:" destination="BYZ-38-t0r" id="onC-3D-JAq"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="w6c-CU-K3M">
+                            <connections>
+                                <action selector="submitNumbers:" destination="BYZ-38-t0r" id="exf-wx-JfO"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="fstFlrTextField" destination="oPi-AI-eMp" id="PR4-fV-c0R"/>
+                        <outlet property="grdLivingAreaTextField" destination="zBT-gO-t9h" id="RaB-87-nYX"/>
+                        <outlet property="lotAreaTextField" destination="lBI-78-xRd" id="94Q-PW-qQd"/>
+                        <outlet property="noFullBathsTextField" destination="SwW-EU-H7a" id="GgW-Sz-pOa"/>
+                        <outlet property="noOfCrsGrgTextField" destination="LCg-fQ-4aD" id="Qtl-M9-pRQ"/>
+                        <outlet property="saveProps" destination="w6c-CU-K3M" id="cxB-TX-uLt"/>
+                        <outlet property="scdFlrTextField" destination="ek5-C7-qr3" id="XA7-Oj-GaU"/>
+                        <outlet property="totalBsmtTextField" destination="vcm-RA-JkX" id="dko-kU-2eE"/>
+                        <outlet property="ttlBdRmsAbvGrdTextField" destination="Y1b-dW-Xfz" id="0zw-N2-vME"/>
+                        <outlet property="ttlRmsAbvGrdTextField" destination="UkJ-BM-7qv" id="BtJ-l7-eKN"/>
+                        <outlet property="wdDckTextField" destination="9oP-4F-wNk" id="5np-He-sQc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1957.9710144927537" y="129.91071428571428"/>
+        </scene>
+        <!--Results-->
+        <scene sceneID="B1Q-fw-Ob4">
+            <objects>
+                <viewController storyboardIdentifier="ResultsVC" id="eL1-RU-tTu" customClass="DisplayResultsControllerViewController" customModule="FoodTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Pbu-Qf-zbm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="37" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vmZ-zN-XUb">
+                                <rect key="frame" x="155.5" y="87" width="103" height="47"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="39"/>
+                                <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="highlightedColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="xcV-ch-5ey">
+                                <rect key="frame" x="16" y="284" width="382" height="258.5"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Where is this property located?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Thl-iV-bvz">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="toggleItalics:" destination="CX7-Lo-yqm" eventType="editingDidEnd" id="gf1-S6-PKH"/>
+                                        </connections>
+                                    </textField>
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="aST-fd-nmK">
+                                        <rect key="frame" x="0.0" y="55" width="382" height="203.5"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="aST-fd-nmK" secondAttribute="height" multiplier="15:8" id="P17-DJ-Hxm"/>
+                                        </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="hxH-Se-8g0" appends="YES" id="CbC-Wl-yxT"/>
+                                        </connections>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="aST-fd-nmK" secondAttribute="bottom" id="L7Q-j2-rDj"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="axg-MR-atO">
+                                <rect key="frame" x="16" y="642.5" width="382" height="30"/>
+                                <color key="backgroundColor" systemColor="tertiaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <segue destination="EkK-iY-yvO" kind="unwind" unwindAction="unwindPropertyToListWithSender:" id="hUl-AZ-Zmt"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" systemColor="tertiarySystemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="vmZ-zN-XUb" firstAttribute="top" secondItem="5je-0g-URr" secondAttribute="top" constant="43" id="02K-DG-OH2"/>
+                            <constraint firstItem="vmZ-zN-XUb" firstAttribute="centerX" secondItem="Pbu-Qf-zbm" secondAttribute="centerX" id="7FB-Tq-CgF"/>
+                            <constraint firstItem="xcV-ch-5ey" firstAttribute="top" secondItem="vmZ-zN-XUb" secondAttribute="bottom" constant="150" id="N3t-7t-uDX"/>
+                            <constraint firstItem="axg-MR-atO" firstAttribute="leading" secondItem="5je-0g-URr" secondAttribute="leading" constant="16" id="SbI-JZ-ndd"/>
+                            <constraint firstItem="axg-MR-atO" firstAttribute="top" secondItem="xcV-ch-5ey" secondAttribute="bottom" constant="100" id="ZTX-bf-sRB"/>
+                            <constraint firstItem="xcV-ch-5ey" firstAttribute="leading" secondItem="5je-0g-URr" secondAttribute="leading" constant="16" id="ZYd-Va-OcJ"/>
+                            <constraint firstAttribute="trailing" secondItem="xcV-ch-5ey" secondAttribute="trailing" constant="16" id="bAa-Oq-EhD"/>
+                            <constraint firstItem="5je-0g-URr" firstAttribute="trailing" secondItem="axg-MR-atO" secondAttribute="trailing" constant="16" id="jRV-nk-Dxb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5je-0g-URr"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Results" id="bUX-fy-L2y">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="U51-V8-nLE"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="KKg-bw-SFc">
+                            <connections>
+                                <segue destination="EkK-iY-yvO" kind="unwind" unwindAction="unwindPropertyToListWithSender:" id="5qT-OS-UkY"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="addressTextField" destination="Thl-iV-bvz" id="D3H-z2-N6R"/>
+                        <outlet property="photoImageView" destination="aST-fd-nmK" id="FUU-kO-M56"/>
+                        <outlet property="resultView" destination="vmZ-zN-XUb" id="YF6-y2-xbc"/>
+                        <outlet property="saveButton" destination="axg-MR-atO" id="ulz-qs-u0I"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CX7-Lo-yqm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="EkK-iY-yvO" userLabel="Exit" sceneMemberID="exit"/>
+                <tapGestureRecognizer id="hxH-Se-8g0">
+                    <connections>
+                        <action selector="selectImageFromPhotoLibrary:" destination="eL1-RU-tTu" id="a9v-FA-1CM"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="2776.811594202899" y="129.91071428571428"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="5IV-PL-97J">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dTv-UC-rgS" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cas-x1-HPQ">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="1tm-mk-GHQ" kind="relationship" relationship="rootViewController" id="yYR-F5-xwY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a74-KO-pc9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-697.10144927536237" y="129.91071428571428"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="3hM-dD-Edx">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tmO-OG-GNv" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="FXp-1D-mj5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="449-lV-vZV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ENa-or-Kvd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1071" y="544"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Image" width="424.5" height="282.5"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="vEv-fO-0Y2"/>
+    </inferredMetricsTieBreakers>
 </document>
